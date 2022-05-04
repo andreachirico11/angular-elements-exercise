@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Elements</title>
+</head>
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo" onclick="routerLink('')" style="cursor: pointer;">HOME
+        </div>
+        <ul class="nav-links">
+            <div class="menu">
+                <li><a onclick="routerLink('stepper')">Stepper</a></li>
+                <li><a onclick="routerLink('spinner')">Spinner</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <angular-component id="angular" style="width: 100%;"></angular-component>
+
+    <script src="angular-element.js"></script>
+    <script>
+        const routerLink = route => {
+            document.getElementById('angular').setAttribute('route', route);
+        }
+    </script>
+</body>
+
+</html>
